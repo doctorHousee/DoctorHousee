@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantilla de Formulario - Registro e Inicio de Sesión</title>
+    <style>
+        :root {
+            --fondo-pagina: #ff006f; /* Cambia este color o pon url('imagen.jpg') */
+            --color-tarjeta: #ffb700;
+        }
+
+        body {
+            background: var(--fondo-pagina); 
+            font-family: sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            
+            /* Centrado del formulario en pantalla */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        form {
+            background-color: var(--color-tarjeta);
+            padding: 30px;
+            max-width: 500px;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Espaciado simple para no encimar elementos */
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        fieldset {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="POST" enctype="multipart/form-data">
+      <h2>Registro de Usuario</h2>
+
+<fieldset>
+	 
+    <legend>Contenido y Archivos</legend>
+
+            <div>
+                <label for="avatar">Subir Foto de Perfil / Avatar:</label>
+                <input type="file" id="avatar" name="avatar" accept="image/*">
+            </div>
+<div>
+      <label for="satisfaccion">Nivel de Satisfacción (Rango):</label>
+                <input type="range" id="satisfaccion" name="satisfaccion" min="0" max="100" value="50">
+            </div>
+
+            <div>
+                <label for="biografia">Semblanza / Bio (Área de Texto):</label>
+                <textarea id="biografia" name="biografia" rows="4" placeholder="Escribe una breve presentación..."></textarea>
+            </div>
+      </fieldset>
+
+        <div>
+            <input type="hidden" name="origen_registro" value="landing_page_2026">
+
+            <input type="checkbox" id="terminos" name="terminos" required>
+            <label for="terminos" style="display:inline;">Acepto los términos y condiciones</label>
+        </div>
+
+        <div>
+            <input type="submit" value="Crear Cuenta">
+            
+            <input type="reset" value="Restablecer Campos">
+            
+            <button type="button">Botón Genérico</button>
+        </div>
+    </form>
+
+</body>
+</html>
